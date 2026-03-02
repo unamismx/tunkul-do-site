@@ -542,6 +542,8 @@ h3 {
   height: 190px;
   object-fit: cover;
   border: 1px solid var(--line);
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 .exp-gallery img:first-child {
@@ -965,6 +967,11 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .exp-gallery img:first-child {
+    grid-column: auto;
+    height: 190px;
+  }
+
 }
 
 @media (max-width: 720px) {
@@ -1027,5 +1034,11 @@ h3 {
   .room-gallery,
   .exp-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .exp-gallery img,
+  .exp-gallery img:first-child {
+    height: 220px;
+    aspect-ratio: 4 / 3;
   }
 }

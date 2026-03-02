@@ -38,6 +38,10 @@ if ('IntersectionObserver' in window) {
     { threshold: 0.2 }
   );
   revealEls.forEach((el) => observer.observe(el));
+  // Safety fallback: if any reveal element did not intersect, show it anyway.
+  window.setTimeout(() => {
+    revealEls.forEach((el) => el.classList.add('in'));
+  }, 1500);
 } else {
   revealEls.forEach((el) => el.classList.add('in'));
 }
@@ -304,7 +308,11 @@ function initNearbyExplorer() {
     });
 
     cards.forEach((card) => {
-      const visible = card.querySelectorAll('.place-item[style="display: block;"]').length;
+      const cardItems = card.querySelectorAll('.place-item');
+      let visible = 0;
+      cardItems.forEach((el) => {
+        if (el.style.display !== 'none') visible += 1;
+      });
       card.style.display = visible > 0 ? 'block' : 'none';
     });
   }
