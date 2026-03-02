@@ -47,7 +47,7 @@ const TRANSLATIONS = {
     nearby_kicker: 'Qué hacer cerca',
     nearby_title: 'Guía local a pie desde Casa Tunkul',
     nearby_intro:
-      'Selección curada de lugares turísticos (sin hoteles) para comer, caminar, tomar algo y conocer Mérida. Incluye Santa Lucía y Centro Histórico, con tiempos y distancias aproximadas caminando desde Casa Tunkul.',
+      'Selección curada de lugares turísticos para comer, caminar, tomar algo y conocer Mérida. Incluye Santa Lucía y Centro Histórico, con tiempos y distancias aproximadas caminando desde Casa Tunkul.',
     filter_all: 'Todo',
     filter_food: 'Comer',
     filter_cafe: 'Cafés',
@@ -159,7 +159,7 @@ const TRANSLATIONS = {
     nearby_kicker: 'What to do nearby',
     nearby_title: 'Local walking guide from Casa Tunkul',
     nearby_intro:
-      'Curated tourist spots (no hotels): places to eat, walk, drink and discover Merida. Includes Santa Lucia and downtown, with approximate walking times and distances.',
+      'Curated tourist spots: places to eat, walk, drink and discover Merida. Includes Santa Lucia and downtown, with approximate walking times and distances.',
     filter_all: 'All',
     filter_food: 'Food',
     filter_cafe: 'Cafes',
@@ -271,7 +271,7 @@ const TRANSLATIONS = {
     nearby_kicker: 'Que faire à proximité',
     nearby_title: 'Guide local à pied depuis Casa Tunkul',
     nearby_intro:
-      'Sélection de lieux touristiques (sans hôtels) pour manger, se promener, sortir et découvrir Mérida. Inclut Santa Lucía et le centre-ville, avec temps et distances estimés à pied.',
+      'Sélection de lieux touristiques pour manger, se promener, sortir et découvrir Mérida. Inclut Santa Lucía et le centre-ville, avec temps et distances estimés à pied.',
     filter_all: 'Tout',
     filter_food: 'Manger',
     filter_cafe: 'Cafés',
