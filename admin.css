@@ -1,0 +1,176 @@
+:root {
+  --bg: #f7f3ec;
+  --surface: #fffdf9;
+  --text: #231d18;
+  --line: rgba(35, 29, 24, 0.12);
+  --accent: #b88a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px 60px;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.admin-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  margin: 0 0 10px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.room-form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.login-card {
+  max-width: 520px;
+  margin: 28px auto 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 12px 24px rgba(35, 29, 24, 0.08);
+}
+
+.login-form {
+  display: grid;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+label.full {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.image-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-upload {
+  white-space: nowrap;
+}
+
+.file-input {
+  display: none;
+}
+
+.preview {
+  margin-top: 6px;
+  width: 220px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  display: none;
+}
+
+.form-note {
+  margin: 8px 0;
+  color: #6e665d;
+  font-size: 0.9rem;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.csv-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.csv-tools input[type="file"] {
+  max-width: 100%;
+  background: #fff;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: #e9dece;
+  color: #543f22;
+}
+
+.status {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

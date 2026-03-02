@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Tunkul | Hotel Boutique en Mérida</title>
+    <meta
+      name="description"
+      content="Descubre Casa Tunkul en Barrio de Santiago, Mérida. Diseño boutique, descanso premium y reserva segura en Cloudbeds."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="#inicio">Casa Tunkul</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">Menu</button>
+        <nav id="mainNav">
+          <a id="nav-history" href="#historia">Historia</a>
+          <a id="nav-suites" href="#suites">Suites</a>
+          <a id="nav-experience" href="#experiencia">Experiencia</a>
+          <a id="nav-location" href="#ubicacion">Ubicación</a>
+          <a id="nav-nearby" href="#cerca">Qué hacer</a>
+          <a id="nav-privacy" href="./aviso-de-privacidad.html">Privacidad</a>
+          <a id="nav-book" class="btn btn-small" href="#reservar">Reservar</a>
+          <select id="langSwitcher" class="lang-switcher" aria-label="Seleccionar idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+          </select>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <img src="./assets/images/hero.jpg" alt="Patio central de Casa Tunkul" class="hero-bg" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p id="hero-kicker" class="kicker">Hotel Boutique en Barrio de Santiago</p>
+          <h1 id="hero-title">Elegancia íntima en el corazón de Mérida</h1>
+          <p id="hero-subtitle">
+            Un refugio de arquitectura yucateca, diseño contemporáneo y descanso total.
+            Reserva en nuestro motor seguro para confirmar disponibilidad y tarifa.
+          </p>
+          <div class="hero-actions">
+            <a id="hero-cta-book" class="btn" href="#reservar">Reservar Ahora</a>
+            <a id="hero-cta-rooms" class="btn btn-ghost" href="#suites">Ver Habitaciones</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-proof section reveal" id="reviews">
+        <div class="section-head">
+          <p class="kicker" id="reviews-kicker">Reseñas verificadas</p>
+          <h2 id="reviews-title">Lo que dicen nuestros huéspedes en Booking</h2>
+          <p id="reviews-intro">
+            Datos consolidados desde export oficial de Booking. Comentarios anonimizados para
+            proteger privacidad de los huéspedes.
+          </p>
+        </div>
+
+        <div class="review-metrics">
+          <article class="review-metric">
+            <strong>9.6/10</strong>
+            <span id="reviews-metric-1">Promedio general</span>
+          </article>
+          <article class="review-metric">
+            <strong>108</strong>
+            <span id="reviews-metric-2">Reseñas registradas</span>
+          </article>
+          <article class="review-metric">
+            <strong>77</strong>
+            <span id="reviews-metric-3">Calificaciones de 10/10</span>
+          </article>
+          <article class="review-metric">
+            <strong>2026</strong>
+            <span id="reviews-metric-4">Último corte analizado</span>
+          </article>
+        </div>
+
+        <div class="review-carousel" id="reviewCarousel">
+          <button class="review-nav" id="reviewPrev" aria-label="Ver reseñas anteriores">‹</button>
+          <div id="bookingReviewCards" class="review-cards"></div>
+          <button class="review-nav" id="reviewNext" aria-label="Ver más reseñas">›</button>
+        </div>
+        <p id="reviews-note" class="review-note">
+          Fuente: export de reseñas de Booking proporcionado por el alojamiento (archivo CSV).
+        </p>
+      </section>
+
+      <section class="award-strip section reveal" id="reconocimientos">
+        <div class="award-copy">
+          <p id="award-kicker" class="kicker">Reconocimiento</p>
+          <h2 id="award-title">Casa Tunkul destacada en Review Awards 2026</h2>
+          <p id="award-desc">
+            Un reconocimiento al compromiso con una hospitalidad cuidada, diseño excepcional y
+            experiencia de estancia consistente.
+          </p>
+        </div>
+        <div class="award-media">
+          <img src="./assets/awards/Digital-Award_RA-2026.png" alt="Review Awards 2026 Casa Tunkul" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="suites section" id="suites">
+        <div class="section-head reveal">
+          <p id="suites-kicker" class="kicker">Suites</p>
+          <h2 id="suites-title">Espacios diseñados para desconectar</h2>
+        </div>
+        <div class="suite-grid">
+          <article class="card reveal">
+            <img id="room1-card-image" src="./assets/images/room-1.jpg" alt="Habitación king con tina" />
+            <div class="card-body">
+              <h3 id="room1-title">Habitación king con tina</h3>
+              <p id="room1-card-desc">
+                Nuestra suite más exclusiva: cama king size de lujo, tina independiente, baño
+                amplio, cocineta de diseño y vista doble a la calle y al jardín central.
+              </p>
+              <p class="suite-note" id="room1-note">
+                Ideal para quienes buscan una experiencia de descanso superior con privacidad y elegancia.
+              </p>
+              <a id="suite-link-1" class="suite-link" href="#habitacion-tina">Ver ficha y fotos</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img id="room2-card-image" src="./assets/images/room-2.jpg" alt="Habitación queen cálida" />
+            <div class="card-body">
+              <h3 id="room2-title">Habitación queen cálida</h3>
+              <p id="room2-card-desc">
+                Una suite íntima y acogedora con cama queen size, baño privado amplio,
+                cocineta completa y vista al jardín central para una estancia relajante.
+              </p>
+              <p class="suite-note" id="room2-note">
+                Perfecta para descansar con comodidad y ambiente sereno durante tu visita a Mérida.
+              </p>
+              <a id="suite-link-2" class="suite-link" href="#habitacion-calida">Ver ficha y fotos</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img id="room3-card-image" src="./assets/images/room-3.jpg" alt="Suite armónica king" />
+            <div class="card-body">
+              <h3 id="room3-title">Suite armónica king</h3>
+              <p id="room3-card-desc">
+                Nuestra suite más espaciosa y tranquila, con cama king size, baño con luz natural
+                cenital, cocineta completa y vista a la piscina.
+              </p>
+              <p class="suite-note" id="room3-note">
+                Ideal para combinar amplitud, privacidad y un toque de exclusividad en Mérida.
+              </p>
+              <a id="suite-link-3" class="suite-link" href="#suite-armonica">Ver ficha y fotos</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="room-details section" id="fichas">
+        <article class="room-detail reveal" id="habitacion-tina">
+          <div class="room-copy">
+            <p class="kicker">Ficha de habitación</p>
+            <h2 id="room1-detail-title">Habitación king con tina</h2>
+            <p id="room1-detail-p1">
+              Sumérgete en una experiencia de descanso superior en nuestra suite más exclusiva,
+              diseñada para quienes valoran el confort y la elegancia. La habitación ofrece cama
+              king size de lujo, aire acondicionado, ventilador de techo, pantalla LCD de 55” y un
+              amplio baño privado con ducha independiente y tina, ideal para relajarte después de
+              explorar Mérida.
+            </p>
+            <p id="room1-detail-p2">
+              La cocineta de diseño está equipada para una estancia sin compromisos: estufa de
+              inducción, frigobar, cafetera Nespresso, tetera eléctrica, máquina para hacer hielo,
+              espumador de leche, tostadora, sartenes, ollas, platos, vasos, copas, sacacorchos y
+              cubiertos. Con vista doble a la calle y al jardín central, combina privacidad, luz
+              natural y un ambiente acogedor.
+            </p>
+          </div>
+          <div class="room-gallery" id="room1-gallery">
+            <img src="./assets/images/room-1.jpg" alt="Habitación con tina en Casa Tunkul" />
+            <img src="./assets/images/room-4.jpg" alt="Habitación con tina y cocineta" />
+            <img src="./assets/images/courtyard.jpg" alt="Vista al patio desde habitación con tina" />
+            <img src="./assets/images/hero.jpg" alt="Detalle arquitectónico en Casa Tunkul" />
+          </div>
+        </article>
+
+        <article class="room-detail reveal" id="habitacion-calida">
+          <div class="room-copy">
+            <p class="kicker">Ficha de habitación</p>
+            <h2 id="room2-detail-title">Habitación queen cálida</h2>
+            <p id="room2-detail-p1">
+              Pensada para quienes buscan un ambiente íntimo y cálido, esta suite ofrece cama queen
+              size, aire acondicionado, ventilador de techo y pantalla LCD de 50” para descansar
+              después de recorrer la ciudad. El baño privado cuenta con ducha amplia para mayor
+              comodidad y privacidad.
+            </p>
+            <p id="room2-detail-p2">
+              La cocineta totalmente equipada incluye estufa de inducción, frigobar, cafetera
+              Nespresso, tetera eléctrica, máquina para hacer hielo, espumador de leche, tostadora,
+              sartenes, ollas, platos, vasos, copas, sacacorchos y cubiertos. Con vista al jardín
+              central, brinda un entorno relajante que conecta con la esencia de Casa Tunkul.
+            </p>
+          </div>
+          <div class="room-gallery" id="room2-gallery">
+            <img src="./assets/images/room-2.jpg" alt="Habitación cálida cama queen" />
+            <img src="./assets/images/lounge.jpg" alt="Habitación cálida detalle interior" />
+            <img src="./assets/images/patio.jpg" alt="Casa Tunkul áreas compartidas" />
+            <img src="./assets/images/courtyard.jpg" alt="Patio central de Casa Tunkul" />
+          </div>
+        </article>
+
+        <article class="room-detail reveal" id="suite-armonica">
+          <div class="room-copy">
+            <p class="kicker">Ficha de habitación</p>
+            <h2 id="room3-detail-title">Suite armónica king</h2>
+            <p id="room3-detail-p1">
+              Nuestra suite más espaciosa y tranquila está diseñada para quienes buscan un ambiente
+              relajante con todo el confort. Cuenta con cama king size, pantalla LCD de 55”, aire
+              acondicionado y ventilador de techo para asegurar una estancia fresca y cómoda en
+              cualquier momento del día.
+            </p>
+            <p id="room3-detail-p2">
+              El baño privado ofrece una ducha amplia con luz natural gracias a un elegante cubo de
+              iluminación cenital que conecta con el cielo y llena el espacio de claridad. La
+              cocineta incluye estufa de inducción, frigobar, cafetera Nespresso, tetera eléctrica,
+              máquina para hacer hielo, espumador de leche, tostadora, sartenes, ollas, platos,
+              vasos, copas, sacacorchos y cubiertos. Su vista a la piscina completa una experiencia
+              serena y exclusiva.
+            </p>
+          </div>
+          <div class="room-gallery" id="room3-gallery">
+            <img src="./assets/images/room-3.jpg" alt="Suite armónica king size" />
+            <img src="./assets/images/room-4.jpg" alt="Suite armónica detalles" />
+            <img src="./assets/images/hero.jpg" alt="Arquitectura Casa Tunkul" />
+            <img src="./assets/images/patio.jpg" alt="Áreas comunes Casa Tunkul" />
+          </div>
+        </article>
+      </section>
+
+      <section class="experience section" id="experiencia">
+        <div class="exp-text reveal">
+          <p class="kicker">Áreas comunes</p>
+          <h2 id="common-title">Áreas comunes en Casa Tunkul</h2>
+          <p id="common-desc-1">
+            El patio central, la piscina y el rooftop están diseñados para que vivas una estancia
+            relajada en un ambiente íntimo y armonioso.
+          </p>
+          <p id="common-desc-2">
+            Cada espacio conserva la esencia arquitectónica de Casa Tunkul y está pensado para
+            disfrutar Mérida con calma, comodidad y estilo.
+          </p>
+        </div>
+        <div class="exp-gallery reveal" id="common-gallery">
+          <img src="./assets/images/lounge.jpg" alt="Área lounge del hotel" />
+          <img src="./assets/images/patio.jpg" alt="Patio del hotel" />
+          <img src="./assets/images/courtyard.jpg" alt="Arquitectura interior de Casa Tunkul" />
+        </div>
+      </section>
+
+      <section class="location section" id="ubicacion">
+        <div class="reveal">
+          <p id="location-kicker" class="kicker">Ubicación</p>
+          <h2 id="location-title">Cerca de todo lo que importa en Mérida</h2>
+          <p id="location-desc">
+            A minutos de Paseo Montejo, cafeterías de autor, galerías y restaurantes.
+            Ideal para vivir la ciudad caminando.
+          </p>
+        </div>
+        <div class="chips reveal">
+          <span id="location-chip-1">Barrio de Santiago</span>
+          <span id="location-chip-2">15-20 min a Paseo de Montejo</span>
+          <span id="location-chip-3">Zona gastronómica</span>
+          <span id="location-chip-4">Movilidad rápida</span>
+        </div>
+        <div class="map-card reveal">
+          <h3 id="map-title">Encuéntranos en Google Maps</h3>
+          <p id="map-desc">
+            Calle 55 No. 559 B entre calles 72 y 74, Barrio de Santiago, Centro,
+            Mérida, Yucatán, México.
+          </p>
+          <iframe
+            title="Mapa de Casa Tunkul"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Calle+55+559B+Centro+Merida+Yucatan&output=embed"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="nearby section reveal" id="cerca">
+        <div class="section-head nearby-head">
+          <p id="nearby-kicker" class="kicker">Qué hacer cerca</p>
+          <h2 id="nearby-title">Guía local a pie desde Casa Tunkul</h2>
+          <p id="nearby-intro" class="nearby-intro">
+            Selección curada de lugares turísticos (sin hoteles) para comer, caminar, tomar algo
+            y conocer Mérida. Incluye Santa Lucía y Centro Histórico, con tiempos y distancias
+            aproximadas caminando desde Casa Tunkul.
+          </p>
+        </div>
+
+        <div class="nearby-controls">
+          <div class="nearby-filters">
+            <button id="filter-all" class="nearby-filter active" data-filter="all" type="button">Todo</button>
+            <button id="filter-food" class="nearby-filter" data-filter="food" type="button">Comer</button>
+            <button id="filter-cafe" class="nearby-filter" data-filter="cafe" type="button">Cafés</button>
+            <button id="filter-bar" class="nearby-filter" data-filter="bar" type="button">Bares</button>
+            <button id="filter-culture" class="nearby-filter" data-filter="culture" type="button">Cultura</button>
+            <button id="filter-park" class="nearby-filter" data-filter="park" type="button">Parques</button>
+          </div>
+          <label class="nearby-search-wrap">
+            <span id="nearby-search-label">Buscar lugar</span>
+            <input id="nearbySearch" class="nearby-search" type="search" placeholder="Ej. Santa Lucía, museo, cantina..." />
+          </label>
+        </div>
+
+        <div class="nearby-grid" id="nearbyGrid">
+          <article class="nearby-card">
+            <h3>Santa Lucía: restaurantes recomendados</h3>
+            <ul>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">9 min · ~750 m</span>
+                </div>
+                <strong>Apoala</strong>
+                <p>Cocina oaxaqueña con propuesta contemporánea frente al parque.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Apoala+Merida+Santa+Lucia" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">9 min · ~750 m</span>
+                </div>
+                <strong>La Tratto Santa Lucía</strong>
+                <p>Pizza-bar y pastas con terraza y gran ambiente nocturno.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=La+Tratto+Santa+Lucia+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">9-10 min · ~800 m</span>
+                </div>
+                <strong>Teya Santa Lucía</strong>
+                <p>Cocina yucateca tradicional en formato elegante.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Teya+Santa+Lucia+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">9-10 min · ~800 m</span>
+                </div>
+                <strong>Rosa Sur 32</strong>
+                <p>Cocina de autor y coctelería con vista al corredor de Santa Lucía.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rosa+Sur+32+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food cafe">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Café restaurante</span>
+                  <span class="walk">9 min · ~750 m</span>
+                </div>
+                <strong>Mi Viejo Molino Santa Lucía</strong>
+                <p>Ideal para desayunos y café en el área del parque.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mi+Viejo+Molino+Santa+Lucia+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">8-9 min · ~700 m</span>
+                </div>
+                <strong>NOL Santa Lucía</strong>
+                <p>Propuesta contemporánea en la zona gastronómica del centro.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=NOL+Restaurante+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">10-12 min · ~1.0 km</span>
+                </div>
+                <strong>La Chaya Maya Casona (Santa Lucía)</strong>
+                <p>Clásico yucateco para probar platillos regionales tradicionales.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=La+Chaya+Maya+Casona+Merida+Santa+Lucia" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Restaurante</span>
+                  <span class="walk">10-14 min · ~1.1 km</span>
+                </div>
+                <strong>Micaela Mar & Leña</strong>
+                <p>Cocina de autor con acento regional y gran carta de bebidas.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Micaela+Mar+y+Lena+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="nearby-card">
+            <h3>Bares y vida nocturna local</h3>
+            <ul>
+              <li class="place-item" data-cats="bar">
+                <div class="place-head">
+                  <span class="place-tag tag-bar"><span class="glyph"></span>Bar</span>
+                  <span class="walk">10-12 min · ~1.0 km</span>
+                </div>
+                <strong>La Negrita Cantina</strong>
+                <p>Cantina clásica de Mérida con música en vivo y ambiente local.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=La+Negrita+Cantina+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="bar">
+                <div class="place-head">
+                  <span class="place-tag tag-bar"><span class="glyph"></span>Bar</span>
+                  <span class="walk">10-12 min · ~1.0 km</span>
+                </div>
+                <strong>Dzalbay Cantina</strong>
+                <p>Cantina bohemia con trova, jazz y conciertos en formato íntimo.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Dzalbay+Cantina+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="bar food">
+                <div class="place-head">
+                  <span class="place-tag tag-bar"><span class="glyph"></span>Mercado bar</span>
+                  <span class="walk">10-14 min · ~1.1 km</span>
+                </div>
+                <strong>Mercado 60</strong>
+                <p>Opciones de comida, cerveza y música para noche relajada.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mercado+60+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="bar">
+                <div class="place-head">
+                  <span class="place-tag tag-bar"><span class="glyph"></span>Mezcalería</span>
+                  <span class="walk">11-14 min · ~1.2 km</span>
+                </div>
+                <strong>La Fundación Mezcalería</strong>
+                <p>Bar nocturno popular para cerrar el recorrido por el centro.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=La+Fundacion+Mezcaleria+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="bar">
+                <div class="place-head">
+                  <span class="place-tag tag-bar"><span class="glyph"></span>Bar lounge</span>
+                  <span class="walk">8-11 min · ~900 m</span>
+                </div>
+                <strong>Pipiripau Bar</strong>
+                <p>Coctelería y ambiente del centro para salida de noche.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pipiripau+Bar+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="nearby-card">
+            <h3>Cultura, parques y caminatas</h3>
+            <ul>
+              <li class="place-item" data-cats="park">
+                <div class="place-head">
+                  <span class="place-tag tag-park"><span class="glyph"></span>Parque</span>
+                  <span class="walk">2-4 min · ~300 m</span>
+                </div>
+                <strong>Parque de Santiago</strong>
+                <p>Vida barrial, arquitectura tradicional y punto ideal para caminar.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Parque+de+Santiago+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="market food">
+                <div class="place-head">
+                  <span class="place-tag tag-market"><span class="glyph"></span>Mercado</span>
+                  <span class="walk">3-5 min · ~450 m</span>
+                </div>
+                <strong>Mercado de Santiago</strong>
+                <p>Comida tradicional yucateca y ambiente local auténtico.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mercado+de+Santiago+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="culture">
+                <div class="place-head">
+                  <span class="place-tag tag-church"><span class="glyph"></span>Iglesia</span>
+                  <span class="walk">4-6 min · ~500 m</span>
+                </div>
+                <strong>Iglesia de Santiago Apóstol</strong>
+                <p>Templo histórico representativo del barrio de Santiago.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santiago+Apostol+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="park culture">
+                <div class="place-head">
+                  <span class="place-tag tag-park"><span class="glyph"></span>Parque</span>
+                  <span class="walk">9 min · ~750 m</span>
+              </div>
+              <strong>Parque de Santa Lucía</strong>
+              <p>Serenata yucateca y epicentro gastronómico del Centro Histórico.</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Parque+de+Santa+Lucia+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+            </li>
+              <li class="place-item" data-cats="culture park">
+                <div class="place-head">
+                  <span class="place-tag tag-park"><span class="glyph"></span>Centro histórico</span>
+                  <span class="walk">9-10 min · ~850 m</span>
+                </div>
+                <strong>Plaza Grande</strong>
+                <p>Corazón del Centro Histórico: catedral, portales y vida cultural.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Plaza+Grande+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="culture">
+                <div class="place-head">
+                  <span class="place-tag tag-museum"><span class="glyph"></span>Museo</span>
+                  <span class="walk">9-11 min · ~900 m</span>
+                </div>
+                <strong>Museo Casa Montejo</strong>
+                <p>Arquitectura histórica y piezas clave de la vida colonial yucateca.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+Casa+Montejo+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="culture">
+                <div class="place-head">
+                  <span class="place-tag tag-museum"><span class="glyph"></span>Museo</span>
+                  <span class="walk">11-14 min · ~1.2 km</span>
+                </div>
+                <strong>Palacio Cantón</strong>
+                <p>Museo Regional de Yucatán sobre Paseo de Montejo.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+Regional+de+Yucatan+Palacio+Canton" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="culture">
+                <div class="place-head">
+                  <span class="place-tag tag-museum"><span class="glyph"></span>Museo</span>
+                  <span class="walk">14-17 min · ~1.4 km</span>
+                </div>
+                <strong>Museo de la Canción Yucateca</strong>
+                <p>Ruta cultural ideal para amantes de la música regional.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Cancion+Yucateca+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="park">
+                <div class="place-head">
+                  <span class="place-tag tag-park"><span class="glyph"></span>Parque</span>
+                  <span class="walk">14-21 min · ~1.8 km</span>
+                </div>
+                <strong>Parque La Plancha</strong>
+                <p>Gran parque urbano para caminata, bici y actividades culturales.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Parque+La+Plancha+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="park culture">
+                <div class="place-head">
+                  <span class="place-tag tag-park"><span class="glyph"></span>Paseo</span>
+                  <span class="walk">16-22 min · ~1.4-1.8 km</span>
+                </div>
+                <strong>Paseo de Montejo</strong>
+                <p>Recorrido icónico para caminar entre arquitectura histórica y cafés.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Paseo+de+Montejo+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="nearby-card">
+            <h3>Cafés y cafeterías recomendadas</h3>
+            <ul>
+              <li class="place-item" data-cats="cafe food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Cafetería</span>
+                  <span class="walk">4-6 min · ~500 m</span>
+                </div>
+                <strong>Placer y Delirio</strong>
+                <p>Panadería-cafetería artesanal muy cerca de Casa Tunkul.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Placer+y+Delirio+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="cafe food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Cafetería</span>
+                  <span class="walk">8-10 min · ~800 m</span>
+                </div>
+                <strong>Manifesto (Casa Tostadora, Santiago)</strong>
+                <p>Café de especialidad y tostado local en barrio de Santiago.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Manifesto+Casa+Tostadora+Calabrese+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="cafe food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Cafetería</span>
+                  <span class="walk">5-7 min · ~500 m</span>
+                </div>
+                <strong>Café Montejo (Calle 59 x 74, Santiago)</strong>
+                <p>Cafetería en Barrio de Santiago, cerca de Casa Tunkul (Calle 59 con 74).</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafe+Montejo+Calle+59+y+74+Barrio+de+Santiago+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="cafe food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Cafetería</span>
+                  <span class="walk">11-13 min · ~1.1 km</span>
+                </div>
+                <strong>Cafetería Pop</strong>
+                <p>Ícono clásico del centro para desayuno, café y ambiente local.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafeteria+Pop+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+              <li class="place-item" data-cats="cafe food">
+                <div class="place-head">
+                  <span class="place-tag tag-food"><span class="glyph"></span>Café restaurante</span>
+                  <span class="walk">9 min · ~750 m</span>
+                </div>
+                <strong>Mi Viejo Molino (Santa Lucía)</strong>
+                <p>Muy buena opción para desayunos y café en la plaza.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mi+Viejo+Molino+Santa+Lucia+Merida" target="_blank" rel="noreferrer">Cómo llegar</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <p id="nearby-note" class="nearby-note">
+          Nota: tiempos y distancias aproximadas a pie con ritmo ligero desde Casa Tunkul.
+        </p>
+      </section>
+
+      <section class="heritage section reveal" id="historia">
+        <div class="heritage-intro">
+          <p id="heritage-kicker" class="kicker">Nuestra esencia</p>
+          <h2 id="heritage-title">Casa Tunkul: historia, cultura y tradición en Santiago</h2>
+          <p id="heritage-intro">
+            Bienvenido a Casa Tunkul, un espacio boutique en el corazón del barrio de Santiago,
+            Mérida, Yucatán. La casa combina herencia cultural yucateca con comodidades modernas
+            para una estancia íntima, elegante y funcional.
+          </p>
+        </div>
+
+        <div class="heritage-grid">
+          <article class="heritage-card">
+            <h3 id="heritage-card-1-title">Un hogar con historia</h3>
+            <p id="heritage-card-1-p1">
+              La propiedad fue adquirida originalmente por Víctor Manuel Martínez Herrera, poeta y
+              compositor yucateco nacido en Cansahcab en 1896, autor de la emblemática canción
+              “El Tunkul” (con música de Carlos Marrufo Cetina) y coautor de “Beso Asesino” junto
+              a Pepe Domínguez.
+            </p>
+            <p id="heritage-card-1-p2">
+              Durante su etapa en esta casa, Martínez Herrera vivió rodeado de inspiración,
+              dejando un legado artístico que hoy forma parte de la identidad de Casa Tunkul.
+            </p>
+          </article>
+
+          <article class="heritage-card">
+            <h3 id="heritage-card-2-title">Ubicación privilegiada</h3>
+            <p id="heritage-card-2-p1">
+              Desde Casa Tunkul puedes recorrer Mérida a pie: a pocos minutos encontrarás el
+              Parque de Santa Lucía, Paseo de Montejo, el Parque de La Plancha y otros puntos
+              culturales y turísticos clave de la ciudad.
+            </p>
+          </article>
+
+          <article class="heritage-card">
+            <h3 id="heritage-card-3-title">Lo que ofrecemos</h3>
+            <ul>
+              <li id="heritage-card-3-li1">Habitaciones únicas: tres espacios privados con carácter propio y cocineta equipada.</li>
+              <li id="heritage-card-3-li2">Áreas comunes encantadoras: piscina, roof, jardín central y sala de lectura.</li>
+              <li id="heritage-card-3-li3">Recepción dinámica: atención flexible adaptada a las necesidades de cada huésped.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking section" id="reservar">
+        <div class="booking-wrap reveal">
+          <div>
+            <p id="booking-kicker" class="kicker">Reserva Oficial</p>
+            <h2 id="booking-title">Haz tu reserva en el motor seguro de Casa Tunkul</h2>
+            <p id="booking-desc">
+              Para mayor seguridad, toda la disponibilidad y el pago se gestionan desde Cloudbeds.
+            </p>
+          </div>
+          <div class="booking-panel">
+            <p id="booking-panel-desc">Selecciona fechas, habitación y método de pago desde la plataforma oficial.</p>
+            <div class="cloudbeds-widget">
+              <script src="https://hotels.cloudbeds.com/widget/load/4yhpKG/vert?newWindow=1"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="floating-cta" href="#reservar">Reservar</a>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p id="footer-kicker" class="kicker">Casa Tunkul</p>
+          <h3 id="footer-brand-title">Hospitalidad boutique en el corazón de Mérida</h3>
+          <p id="footer-address">
+            Calle 55 No. 559 B entre calles 72 y 74, Barrio de Santiago, Centro,
+            Mérida, Yucatán, México.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-contact-title">Contacto</h4>
+          <a href="mailto:jrivera@tunkul.mx">jrivera@tunkul.mx</a>
+          <a id="footer-book" href="#reservar">Reservar ahora</a>
+          <a id="footer-directions" href="#ubicacion">Cómo llegar</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-explore-title">Explora</h4>
+          <a id="footer-rooms" href="#suites">Habitaciones</a>
+          <a id="footer-nearby" href="#cerca">Qué hacer cerca</a>
+          <a id="footer-essence" href="#historia">Nuestra esencia</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-legal-title">Legal</h4>
+          <a id="footer-privacy" href="./aviso-de-privacidad.html">Aviso de privacidad</a>
+          <a href="./admin.html">Panel Admin</a>
+        </div>
+      </div>
+      <p id="footer-copy" class="footer-copy">© 2026 Casa Tunkul. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./site-config.js"></script>
+    <script src="./script.js"></script>
+    <script src="./i18n.js"></script>
+  </body>
+</html>

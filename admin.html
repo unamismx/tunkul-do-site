@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Casa Tunkul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <main class="admin-wrap">
+      <section id="loginGate" class="login-card">
+        <p class="kicker">Acceso protegido</p>
+        <h1>Panel Admin Casa Tunkul</h1>
+        <p>Ingresa usuario y contraseña para administrar contenidos.</p>
+
+        <form id="loginForm" class="login-form">
+          <label>
+            Usuario
+            <input id="adminUser" type="text" autocomplete="username" required />
+          </label>
+          <label>
+            Contraseña
+            <input id="adminPass" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+        <p id="loginStatus" class="status"></p>
+        <p><a href="./index.html">Volver al sitio</a></p>
+      </section>
+
+      <section id="adminApp" class="admin-app hidden">
+        <header>
+          <p class="kicker">Panel de administración</p>
+          <h1>Casa Tunkul</h1>
+          <p>Configura textos e imágenes de habitaciones. Guarda y recarga la home.</p>
+        </header>
+
+        <section id="roomsContainer"></section>
+
+        <div class="actions">
+          <button id="saveBtn" class="btn">Guardar cambios</button>
+          <button id="resetBtn" class="btn btn-ghost">Restaurar default</button>
+          <button id="exportBtn" class="btn btn-ghost">Exportar JSON</button>
+          <button id="logoutBtn" class="btn btn-ghost">Cerrar sesión</button>
+        </div>
+
+        <p id="status" class="status"></p>
+        <p><a href="./index.html">Volver al sitio</a></p>
+      </section>
+    </main>
+
+    <script src="./site-config.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>
