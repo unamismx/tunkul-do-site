@@ -801,6 +801,10 @@ h3 {
   margin: 0;
 }
 
+.booking-panel .btn {
+  align-self: flex-start;
+}
+
 .cloudbeds-widget {
   display: flex;
   justify-content: center;

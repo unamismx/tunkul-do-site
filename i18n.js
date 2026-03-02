@@ -66,6 +66,7 @@ const TRANSLATIONS = {
     booking_title: 'Haz tu reserva en el motor seguro de Casa Tunkul',
     booking_desc: 'Para mayor seguridad, toda la disponibilidad y el pago se gestionan desde Cloudbeds.',
     booking_panel_desc: 'Selecciona fechas, habitación y método de pago desde la plataforma oficial.',
+    booking_cta_external: 'Reservar en Cloudbeds',
     footer_kicker: 'Casa Tunkul',
     footer_brand_title: 'Hospitalidad boutique en el corazón de Mérida',
     footer_address: 'Calle 55 No. 559 B entre calles 72 y 74, Barrio de Santiago, Centro, Mérida, Yucatán, México.',
@@ -178,6 +179,7 @@ const TRANSLATIONS = {
     booking_title: 'Book your stay on Casa Tunkul secure engine',
     booking_desc: 'For your security, availability and payment are managed through Cloudbeds.',
     booking_panel_desc: 'Select dates, room and payment method on the official platform.',
+    booking_cta_external: 'Book on Cloudbeds',
     footer_kicker: 'Casa Tunkul',
     footer_brand_title: 'Boutique hospitality in the heart of Merida',
     footer_address: '55 Street No. 559 B between 72 and 74, Santiago District, Downtown, Merida, Yucatan, Mexico.',
@@ -290,6 +292,7 @@ const TRANSLATIONS = {
     booking_title: 'Réservez via le moteur sécurisé de Casa Tunkul',
     booking_desc: 'Pour votre sécurité, disponibilité et paiement sont gérés via Cloudbeds.',
     booking_panel_desc: 'Sélectionnez vos dates, votre chambre et votre mode de paiement sur la plateforme officielle.',
+    booking_cta_external: 'Réserver sur Cloudbeds',
     footer_kicker: 'Casa Tunkul',
     footer_brand_title: 'Hospitalité boutique au cœur de Mérida',
     footer_address: 'Calle 55 No. 559 B entre 72 et 74, quartier Santiago, centre, Mérida, Yucatán, Mexique.',
@@ -477,7 +480,7 @@ const KEYS = [
   'location_kicker','location_title','location_desc','location_chip_1','location_chip_2','location_chip_3','location_chip_4','map_title','map_desc',
   'nearby_kicker','nearby_title','nearby_intro','filter_all','filter_food','filter_cafe','filter_bar','filter_culture','filter_park','nearby_search_label','nearby_note',
   'heritage_kicker','heritage_title','heritage_intro',
-  'booking_kicker','booking_title','booking_desc','booking_panel_desc',
+  'booking_kicker','booking_title','booking_desc','booking_panel_desc','booking_cta_external',
   'footer_kicker','footer_brand_title','footer_address','footer_contact_title','footer_book','footer_directions',
   'footer_explore_title','footer_rooms','footer_nearby','footer_essence','footer_legal_title','footer_privacy','footer_copy'
 ];
