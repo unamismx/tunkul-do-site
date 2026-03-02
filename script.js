@@ -1,5 +1,31 @@
 document.documentElement.classList.add('js-ready');
 
+const GOOGLE_ADS_BOOKING_SEND_TO = 'AW-16928133263/jKR_CJee5IEcEI-h-4c_';
+
+function gtagReportBookingConversion(url) {
+  if (typeof window.gtag !== 'function') {
+    if (url) window.location.href = url;
+    return false;
+  }
+
+  let redirected = false;
+  const goToUrl = () => {
+    if (redirected || !url) return;
+    redirected = true;
+    window.location.href = url;
+  };
+
+  window.gtag('event', 'conversion', {
+    send_to: GOOGLE_ADS_BOOKING_SEND_TO,
+    event_callback: goToUrl
+  });
+
+  window.setTimeout(goToUrl, 1200);
+  return false;
+}
+
+window.gtag_report_conversion = gtagReportBookingConversion;
+
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.getElementById('mainNav');
 const header = document.querySelector('.site-header');
@@ -14,6 +40,25 @@ document.addEventListener('click', (event) => {
   if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
     nav.classList.remove('open');
   }
+});
+
+document.addEventListener('click', (event) => {
+  const target = event.target instanceof Element ? event.target.closest('a[href]') : null;
+  if (!target) return;
+
+  const href = target.getAttribute('href') || '';
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+  let parsed;
+  try {
+    parsed = new URL(href, window.location.href);
+  } catch {
+    return;
+  }
+
+  if (!parsed.hostname.includes('hotels.cloudbeds.com')) return;
+  event.preventDefault();
+  gtagReportBookingConversion(parsed.href);
 });
 
 window.addEventListener('scroll', () => {
