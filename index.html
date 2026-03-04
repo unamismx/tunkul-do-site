@@ -19,6 +19,29 @@
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
+      let tunkulCookieState = 'pending';
+      try {
+        const savedState = localStorage.getItem('tunkul_cookie_consent_v1');
+        if (savedState === 'accepted' || savedState === 'rejected') {
+          tunkulCookieState = savedState;
+        }
+      } catch (error) {
+        tunkulCookieState = 'pending';
+      }
+      const consentDefaults = tunkulCookieState === 'accepted'
+        ? {
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted'
+        }
+        : {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        };
+      gtag('consent', 'default', consentDefaults);
       gtag('config', 'G-NK46K1KFB7');
       gtag('config', 'AW-16928133263');
     </script>
@@ -682,6 +705,19 @@
 
     <a class="floating-cta" href="#reservar">Reservar</a>
 
+    <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+      <div class="cookie-banner-copy">
+        <p class="cookie-banner-title" id="cookieTitle">Cookies y privacidad</p>
+        <p class="cookie-banner-text" id="cookieText">
+          Usamos cookies para medir visitas y mejorar tu experiencia. Puedes aceptar o rechazar el uso de cookies analíticas y publicitarias.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="btn btn-small btn-ghost-cookie" id="cookieReject" type="button">Rechazar</button>
+        <button class="btn btn-small" id="cookieAccept" type="button">Aceptar</button>
+      </div>
+    </aside>
+
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
@@ -717,6 +753,7 @@
     </footer>
 
     <script src="./site-config.js"></script>
+    <script src="./cookie-consent.js"></script>
     <script src="./script.js"></script>
     <script src="./i18n.js"></script>
   </body>
