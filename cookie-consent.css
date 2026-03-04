@@ -1,0 +1,75 @@
+.cookie-banner {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.cookie-banner.visible {
+  display: flex;
+}
+
+.cookie-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 9, 8, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.cookie-modal-card {
+  position: relative;
+  width: min(640px, 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(150deg, #1f1a16, #33291f);
+  color: #f5efe6;
+  padding: 24px;
+  box-shadow: 0 24px 44px rgba(10, 9, 8, 0.42);
+}
+
+.cookie-banner-title {
+  margin: 0 0 8px;
+  font-size: 1.18rem;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.02em;
+}
+
+.cookie-banner-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(245, 239, 230, 0.9);
+}
+
+.cookie-banner-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-ghost-cookie {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost-cookie:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+body.cookie-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .cookie-modal-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .cookie-banner-actions {
+    flex-direction: column;
+  }
+}

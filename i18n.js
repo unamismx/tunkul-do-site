@@ -79,6 +79,7 @@ const TRANSLATIONS = {
     footer_essence: 'Nuestra esencia',
     footer_legal_title: 'Legal',
     footer_privacy: 'Aviso de privacidad',
+    footer_cookies: 'Configurar cookies',
     footer_copy: '© 2026 Casa Tunkul. Todos los derechos reservados.',
     room_sheet_kicker: 'Ficha de habitación',
     room_link: 'Ver ficha y fotos',
@@ -192,6 +193,7 @@ const TRANSLATIONS = {
     footer_essence: 'Our essence',
     footer_legal_title: 'Legal',
     footer_privacy: 'Privacy Notice',
+    footer_cookies: 'Cookie settings',
     footer_copy: '© 2026 Casa Tunkul. All rights reserved.',
     room_sheet_kicker: 'Room profile',
     room_link: 'View details and photos',
@@ -305,6 +307,7 @@ const TRANSLATIONS = {
     footer_essence: 'Notre essence',
     footer_legal_title: 'Légal',
     footer_privacy: 'Politique de confidentialité',
+    footer_cookies: 'Préférences cookies',
     footer_copy: '© 2026 Casa Tunkul. Tous droits réservés.',
     room_sheet_kicker: 'Fiche de chambre',
     room_link: 'Voir fiche et photos',
@@ -482,7 +485,7 @@ const KEYS = [
   'heritage_kicker','heritage_title','heritage_intro',
   'booking_kicker','booking_title','booking_desc','booking_panel_desc','booking_cta_external',
   'footer_kicker','footer_brand_title','footer_address','footer_contact_title','footer_book','footer_directions',
-  'footer_explore_title','footer_rooms','footer_nearby','footer_essence','footer_legal_title','footer_privacy','footer_copy'
+  'footer_explore_title','footer_rooms','footer_nearby','footer_essence','footer_legal_title','footer_privacy','footer_cookies','footer_copy'
 ];
 
 function applyLanguage(lang) {

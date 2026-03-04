@@ -77,27 +77,44 @@ function initCookieConsent() {
   const rejectBtn = document.getElementById('cookieReject');
   if (!banner || !acceptBtn || !rejectBtn) return;
 
+  function showBanner() {
+    banner.classList.add('visible');
+    document.body.classList.add('cookie-modal-open');
+  }
+
+  function hideBanner() {
+    banner.classList.remove('visible');
+    document.body.classList.remove('cookie-modal-open');
+  }
+
   applyCookieText();
 
   const saved = safeGetLocalStorage(COOKIE_CONSENT_KEY);
   const hasDecision = saved === 'accepted' || saved === 'rejected';
   if (hasDecision) {
-    banner.classList.remove('visible');
+    hideBanner();
     updateGoogleConsent(saved);
   } else {
-    banner.classList.add('visible');
+    showBanner();
   }
 
   acceptBtn.addEventListener('click', () => {
     safeSetLocalStorage(COOKIE_CONSENT_KEY, 'accepted');
     updateGoogleConsent('accepted');
-    banner.classList.remove('visible');
+    hideBanner();
   });
 
   rejectBtn.addEventListener('click', () => {
     safeSetLocalStorage(COOKIE_CONSENT_KEY, 'rejected');
     updateGoogleConsent('rejected');
-    banner.classList.remove('visible');
+    hideBanner();
+  });
+
+  document.querySelectorAll('[data-cookie-open]').forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      showBanner();
+    });
   });
 
   document.getElementById('langSwitcher')?.addEventListener('change', applyCookieText);

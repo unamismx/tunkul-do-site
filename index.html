@@ -46,6 +46,7 @@
       gtag('config', 'AW-16928133263');
     </script>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./cookie-consent.css?v=2" />
   </head>
   <body>
     <header class="site-header">
@@ -705,16 +706,19 @@
 
     <a class="floating-cta" href="#reservar">Reservar</a>
 
-    <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-      <div class="cookie-banner-copy">
-        <p class="cookie-banner-title" id="cookieTitle">Cookies y privacidad</p>
-        <p class="cookie-banner-text" id="cookieText">
-          Usamos cookies para medir visitas y mejorar tu experiencia. Puedes aceptar o rechazar el uso de cookies analíticas y publicitarias.
-        </p>
-      </div>
-      <div class="cookie-banner-actions">
-        <button class="btn btn-small btn-ghost-cookie" id="cookieReject" type="button">Rechazar</button>
-        <button class="btn btn-small" id="cookieAccept" type="button">Aceptar</button>
+    <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-modal="true" aria-label="Aviso de cookies">
+      <div class="cookie-modal-backdrop"></div>
+      <div class="cookie-modal-card">
+        <div class="cookie-banner-copy">
+          <p class="cookie-banner-title" id="cookieTitle">Cookies y privacidad</p>
+          <p class="cookie-banner-text" id="cookieText">
+            Usamos cookies para medir visitas y mejorar tu experiencia. Puedes aceptar o rechazar el uso de cookies analíticas y publicitarias.
+          </p>
+        </div>
+        <div class="cookie-banner-actions">
+          <button class="btn btn-small btn-ghost-cookie" id="cookieReject" type="button">Rechazar</button>
+          <button class="btn btn-small" id="cookieAccept" type="button">Aceptar</button>
+        </div>
       </div>
     </aside>
 
@@ -746,6 +750,7 @@
         <div class="footer-col">
           <h4 id="footer-legal-title">Legal</h4>
           <a id="footer-privacy" href="./aviso-de-privacidad.html">Aviso de privacidad</a>
+          <a id="footer-cookies" href="#" data-cookie-open>Configurar cookies</a>
           <a href="./admin.html">Panel Admin</a>
         </div>
       </div>
